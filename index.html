@@ -7,21 +7,38 @@
     <style>
         body {
             margin: 0;
+            padding: 0;
             display: flex;
-            justify-content: center; /* Vycentruje horizontálne */
-            align-items: flex-start; /* Umiestni na začiatok (hore) */
-            padding-top: 50px; /* Medzera od vrchu */
-            background-color: #ffffff;
+            justify-content: center; /* Vycentruje logo vodorovne */
+            align-items: flex-start; /* Umiestni logo hore */
+            min-height: 100vh;
+            
+            /* Nastavenie modrého pozadia a obrázka */
+            background-color: blue; /* Základná modrá farba */
+            background-image: url('gdbackround.png'); /* Tvoj súbor pozadia */
+            background-size: cover; /* Obrázok pokryje celú plochu */
+            background-position: center; /* Vycentrovanie obrázka pozadia */
+            background-repeat: no-repeat; /* Zabráni opakovaniu obrázka */
+            background-attachment: fixed; /* Pozadie zostane na mieste pri skrolovaní */
         }
+
+        .logo-container {
+            margin-top: 50px; /* Medzera od horného okraja */
+            text-align: center;
+        }
+
         img {
-            max-width: 90%; /* Aby logo nebolo väčšie ako displej mobilu */
+            max-width: 90%; /* Prispôsobenie veľkosti pre mobily */
             height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <img src="logodelfondash.png" alt="Logo Delfondash">
+    <div class="logo-container">
+        <img src="logodelfondash.png" alt="Logo Delfondash" onerror="this.style.display='none'; console.log('Logo nenájdené');">
+    </div>
 
 </body>
 </html>
