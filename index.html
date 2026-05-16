@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delfondash</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Delfonox Slovakia</title>
     <style>
         body {
-            background-color: #ffffff;
             margin: 0;
-            padding: 0;
+            display: flex;
+            justify-content: center; /* Vycentruje horizontálne */
+            align-items: flex-start; /* Umiestni na začiatok (hore) */
+            padding-top: 50px; /* Medzera od vrchu */
+            background-color: #ffffff;
+        }
+        img {
+            max-width: 90%; /* Aby logo nebolo väčšie ako displej mobilu */
+            height: auto;
         }
     </style>
 </head>
-<body class="flex flex-col items-center justify-start pt-10 min-h-screen">
+<body>
 
-    <div class="logo-container">
-        <img 
-            src="logodelfondash.png" 
-            alt="Logo Delfondash" 
-            class="max-w-[300px] h-auto"
-            onerror="this.onerror=null; this.src='https://placehold.co/300x100/f3f4f6/4f46e5?text=logodelfondash.png';"
-        >
-    </div>
+    <img src="logodelfondash.png" alt="Logo Delfondash">
 
 </body>
 </html>
