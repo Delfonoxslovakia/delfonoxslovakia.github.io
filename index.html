@@ -9,8 +9,8 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center; /* Horizontálne centrovanie */
-            align-items: center;     /* Vertikálne centrovanie */
+            justify-content: center; /* Horizontálne v strede */
+            align-items: flex-start; /* Umiestnenie na začiatok (hore) */
             min-height: 100vh;
             
             /* Modrý filter nad obrázkom pozadia */
@@ -23,13 +23,12 @@
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            overflow: hidden; /* Zabraňuje scrollovaniu, ak je logo presne v strede */
         }
 
         .logo-container {
+            margin-top: 30px; /* Odstup loga od úplného vrchu */
             display: flex;
             justify-content: center;
-            align-items: center;
             width: 100%;
             z-index: 10;
         }
