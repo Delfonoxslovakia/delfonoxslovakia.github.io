@@ -9,35 +9,41 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center; /* Vycentruje logo vodorovne */
-            align-items: flex-start; /* Umiestni logo hore */
+            justify-content: center;
+            align-items: flex-start;
             min-height: 100vh;
             
-            /* Nastavenie modrého pozadia a obrázka */
-            background-color: blue; /* Základná modrá farba */
-            background-image: url('gdbackround.png'); /* Tvoj súbor pozadia */
-            background-size: cover; /* Obrázok pokryje celú plochu */
-            background-position: center; /* Vycentrovanie obrázka pozadia */
-            background-repeat: no-repeat; /* Zabráni opakovaniu obrázka */
-            background-attachment: fixed; /* Pozadie zostane na mieste pri skrolovaní */
+            /* Lineárny prechod vytvorí modrý filter nad obrázkom */
+            background: 
+                linear-gradient(rgba(0, 102, 255, 0.7), rgba(0, 102, 255, 0.7)), 
+                url('gdbackround.png');
+            
+            background-color: #0066ff; /* Záložná modrá */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .logo-container {
-            margin-top: 50px; /* Medzera od horného okraja */
+            margin-top: 50px;
             text-align: center;
+            z-index: 10;
         }
 
         img {
-            max-width: 90%; /* Prispôsobenie veľkosti pre mobily */
+            max-width: 80%; /* Trochu som zmenšil logo, aby lepšie vyniklo */
             height: auto;
             display: block;
+            /* Jemný tieň pod logom, aby "vyskočilo" z pozadia */
+            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.5));
         }
     </style>
 </head>
 <body>
 
     <div class="logo-container">
-        <img src="logodelfondash.png" alt="Logo Delfondash" onerror="this.style.display='none'; console.log('Logo nenájdené');">
+        <img src="logodelfondash.png" alt="Logo Delfondash" onerror="this.style.border='2px solid white'; console.log('Logo nenájdené');">
     </div>
 
 </body>
