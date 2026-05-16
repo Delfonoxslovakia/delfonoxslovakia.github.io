@@ -9,33 +9,35 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            justify-content: center; /* Horizontálne centrovanie */
+            align-items: center;     /* Vertikálne centrovanie */
             min-height: 100vh;
             
-            /* Lineárny prechod vytvorí modrý filter nad obrázkom */
+            /* Modrý filter nad obrázkom pozadia */
             background: 
                 linear-gradient(rgba(0, 102, 255, 0.7), rgba(0, 102, 255, 0.7)), 
                 url('gdbackround.png');
             
-            background-color: #0066ff; /* Záložná modrá */
+            background-color: #0066ff;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            overflow: hidden; /* Zabraňuje scrollovaniu, ak je logo presne v strede */
         }
 
         .logo-container {
-            margin-top: 50px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
             z-index: 10;
         }
 
         img {
-            max-width: 80%; /* Trochu som zmenšil logo, aby lepšie vyniklo */
+            max-width: 80%;
             height: auto;
-            display: block;
-            /* Jemný tieň pod logom, aby "vyskočilo" z pozadia */
+            /* Jemný tieň pod logom */
             filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.5));
         }
     </style>
@@ -43,7 +45,7 @@
 <body>
 
     <div class="logo-container">
-        <img src="logodelfondash.png" alt="Logo Delfondash" onerror="this.style.border='2px solid white'; console.log('Logo nenájdené');">
+        <img src="logodelfondash.png" alt="Logo Delfondash" onerror="this.style.border='2px dashed white';">
     </div>
 
 </body>
