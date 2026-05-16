@@ -1,3 +1,3 @@
-<img width="1392" height="179" alt="logo - delfonox dash" src="https://github.com/user-attachments/assets/40386e39-1737-44e1-9091-9c8ec9b7c6b8" />
+<img width="1693" height="179" alt="logo - Delfonox Slovakia" src="https://github.com/user-attachments/assets/ebec5fec-4a6b-475e-8d74-4fa2315b460f" />
 
 # Vitaj na mojej webstranke :)
