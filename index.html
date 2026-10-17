@@ -34,16 +34,52 @@
         .logo-container {
             margin-top: 30px; /* Odstup loga od úplného vrchu */
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Usporiada logo a tlačidlo pod seba */
+            align-items: center;
             width: 100%;
             z-index: 10;
         }
 
-        img {
+        .logo-img {
             max-width: 80%;
             height: auto;
             /* Jemný tieň pod logom */
             filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.5));
+        }
+
+        .gd-button {
+            margin-top: 40px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 280px;
+            height: 90px;
+            background-image: url('Button_template3.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Arial Black', 'Impact', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000, 0px 3px 5px rgba(0,0,0,0.8);
+            cursor: pointer;
+            transition: transform 0.1s ease, filter 0.1s ease;
+            filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.4));
+            user-select: none;
+        }
+
+        /* Efekt stlačenia tlačidla */
+        .gd-button:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.6)) brightness(1.1);
+        }
+
+        .gd-button:active {
+            transform: scale(0.95);
+            filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.4));
         }
     </style>
 </head>
@@ -51,7 +87,12 @@
 
     <div class="logo-container">
         <!-- Zmenené na nové logo logodelfonsk.png -->
-        <img src="logodelfonsk.png" alt="Logo Delfonox" onerror="this.style.border='2px dashed white';">
+        <img class="logo-img" src="logodelfonsk.png" alt="Logo Delfonox" onerror="this.style.border='2px dashed white';">
+        
+        <!-- Tlačidlo pre Texture Pack -->
+        <a href="#" class="gd-button">
+            Môj texture pack
+        </a>
     </div>
 
 </body>
